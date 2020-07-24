@@ -52,7 +52,7 @@
 
 
     <div class="hero text-center" style="background-image: url('../static/images/nasa2.jpg');">
-      <h1 class="title">{{ prediction_text }}</h1>
+      <h1 class="title">Peter Shapiro</h1>
     </div>
     <div class="container">
       <div class="row margin-top-50">
@@ -61,39 +61,13 @@
             <div class="panel panel-default">
               <div class="panel-heading">Features</div>
               <div class="panel-body">
-                    <form action="{{ url_for('predict')}}"method="post">
-                      <input type="text" name="OverallQual" placeholder="Overall Quality(1-10)" required="required" />
-                      <input type="text" name="YearBuilt" placeholder="Year Built (1990)" required="required" />
-                      <input type="text" name="YearRemodAdd" placeholder="Remodel Added (1990)" required="required" />
-                      <input type="text" name="TotalBsmtSF" placeholder="Basement Square Feet" required="required" />
-                      <input type="text" name="1stFlrSF" placeholder="First Floor Square Feet" required="required" />
-                      <input type="text" name="GrLivArea" placeholder="Greater Living Area" required="required" />
-                      <input type="text" name="FullBath" placeholder="# of Full Baths" required="required" />
-                      <input type="text" name="TotRmsAbvGrd" placeholder="# Rooms Above Ground" required="required" />
-                      <input type="text" name="GarageCars" placeholder="Garage Car Capacity" required="required" />
-                      <input type="text" name="GarageArea" placeholder="Garage Area in Sq Ft" required="required" />
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
+            
               </div>
             </div>
           </aside>
         </div>
         <div class="col-md-9">
-          <div id="table-area" class="">
-            <strong>{{ prediction_text }}</strong>
-            <br>
-            <br>
-            <p>Where did this number come from?</p>
-            <br>
-            <br>
-            <p>1460 homes in Ames, Iowa containing 80 features of both numerical and categorical data were analyzed and reduced to the top 10 correlated with Sales Price.</p>
-            <br>
-            <br>
-            <p>A random forest machine learning model was trained using this data and the predicted outcome is shown above.</p>
-            <br>
-            <p>To learn more click <a href="{{ url_for('daniel')}}">here</a> or to see the code checkout our <a href="https://github.com/pshappycle/House_Prices_Advanced_Regression_Techniques">Github Repository</a></p>
-          </div>
+
         </div>
       </div>
     </div>

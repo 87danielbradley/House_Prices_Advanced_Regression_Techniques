@@ -43,6 +43,30 @@ def predict():
 
     return render_template('index.html', prediction_text='Home Value Estimation $ {}'.format(output))
 
+@app.route('/daniel')
+def daniel():
+
+    return render_template('daniel.html')
+
+@app.route('/nate')
+def nate():
+    
+    return render_template('nate.html')
+
+@app.route('/peter')
+def peter():
+    
+
+    return render_template('peter.html')
+
+@app.route('/presentation')
+def presentation():
+    
+
+    return render_template('presentation.html')
+
+
+
 
     
 if __name__==  '__main__':

@@ -35,9 +35,10 @@
           <div class="dropdown">
           <button class="dropbtn">Collaborators</button>
           <div class="dropdown-content">
-          <a href="#">Daniel</a>
-          <a href="#">Nate</a>
-          <a href="#">Peter</a>
+          <a href="{{ url_for('daniel')}}">Daniel</a>
+          <a href="{{ url_for('nate')}}">Nate</a>
+          <a href="{{ url_for('peter')}}">Peter</a>
+          <a href="{{ url_for('presentation')}}">Presentation</a>
           </div>
 
 
@@ -53,9 +54,9 @@
     <div class="hero text-center" style="background-image: url('../static/images/nasa.jpg');">
       <h1 class="title">Ames, IA Real Estate Calculator</h1>
       <p class="title">The Truth is Out There</p>
-      <p class="title">Nate Berman</p>
-      <p class="title">Daniel Bradley</p>
-      <p class="title">Peter Shapiro</p>
+      <p class="title"><a href="{{ url_for('nate')}}">Nate Berman</a></p>
+      <p class="title"><a href="{{ url_for('daniel')}}">Daniel Bradley</a></p>
+      <p class="title"><a href="{{ url_for('peter')}}">Peter Shapiro</a></p>
     </div>
     <div class="container">
       <div class="row margin-top-50">
