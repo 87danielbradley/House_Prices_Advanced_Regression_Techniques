@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>RF ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Home Value</h1>
+  <strong>{{ prediction_text }}</strong>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="OverallQual" placeholder="Overall Quality(1-10)" required="required" />
+      <input type="text" name="YearBuilt" placeholder="Year Built (1990)" required="required" />
+		  <input type="text" name="YearRemodAdd" placeholder="Remodel Added (1990)" required="required" />
+      <input type="text" name="TotalBsmtSF" placeholder="Basement Square Feet" required="required" />
+      <input type="text" name="1stFlrSF" placeholder="First Floor Square Feet" required="required" />
+      <input type="text" name="GrLivArea" placeholder="Greater Living Area" required="required" />
+      <input type="text" name="FullBath" placeholder="# of Full Baths" required="required" />
+      <input type="text" name="TotRmsAbvGrd" placeholder="# Rooms Above Ground" required="required" />
+      <input type="text" name="GarageCars" placeholder="Garage Car Capacity" required="required" />
+      <input type="text" name="GarageArea" placeholder="Garage Area in Sq Ft" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   
+
+ </div>
+ 
+
+
+</body>
+</html>

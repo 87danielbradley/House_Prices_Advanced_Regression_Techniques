@@ -31,7 +31,7 @@ model = pickle.load(open('rf_model.pkl','rb'))
 @app.route("/")
 def home():
     """All available api routes"""
-    return render_template('index.html')
+    return render_template('home.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -41,15 +41,9 @@ def predict():
 
     output = round(prediction[0],2)
 
-    return render_template('index.html', prediction_text='Home Value should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='Home Value Estimation $ {}'.format(output))
 
-@app.route('/predict_api',methods=['POST'])
-def predict_api():
-    data = requests.get_json(force=True)
-    prediction = model.predict([np.array(list(data.values()))])
 
-    output = prediction[0]
-    return jsonify(output)
     
 if __name__==  '__main__':
     app.run(debug=True)
