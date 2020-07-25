@@ -62,18 +62,18 @@
               <div class="panel-heading">Features</div>
               <div class="panel-body">
                     <form action="{{ url_for('predict')}}"method="post">
-                      <input type="text" name="OverallQual" placeholder="Overall Quality(1-10)" required="required" />
-                      <input type="text" name="YearBuilt" placeholder="Year Built (1990)" required="required" />
-                      <input type="text" name="YearRemodAdd" placeholder="Remodel Added (1990)" required="required" />
-                      <input type="text" name="TotalBsmtSF" placeholder="Basement Square Feet" required="required" />
-                      <input type="text" name="1stFlrSF" placeholder="First Floor Square Feet" required="required" />
-                      <input type="text" name="GrLivArea" placeholder="Greater Living Area" required="required" />
-                      <input type="text" name="FullBath" placeholder="# of Full Baths" required="required" />
-                      <input type="text" name="TotRmsAbvGrd" placeholder="# Rooms Above Ground" required="required" />
-                      <input type="text" name="GarageCars" placeholder="Garage Car Capacity" required="required" />
-                      <input type="text" name="GarageArea" placeholder="Garage Area in Sq Ft" required="required" />
+                      <input type="text" name="OverallQual" placeholder="Overall Quality(1-10)" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="YearBuilt" placeholder="Year Built (1990)" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="YearRemodAdd" placeholder="Remodel Added (1990)" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="TotalBsmtSF" placeholder="Basement Square Feet" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="1stFlrSF" placeholder="First Floor Square Feet" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="GrLivArea" placeholder="Greater Living Area" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="FullBath" placeholder="# of Full Baths" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="TotRmsAbvGrd" placeholder="# Rooms Above Ground" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="GarageCars" placeholder="Garage Car Capacity" required="required" size="25%" style="margin-left:7px"/>
+                      <input type="text" name="GarageArea" placeholder="Garage Area in Sq Ft" required="required" size="25%" style="margin-left:7px"/>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <button type="submit" class="btn btn-primary btn-block">Predict</button>
     </form>
               </div>
             </div>
