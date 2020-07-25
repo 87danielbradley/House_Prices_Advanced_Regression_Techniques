@@ -52,22 +52,62 @@
 
 
     <div class="hero text-center" style="background-image: url('../static/images/nasa3.jpg');">
-      <h1 class="title">Daniel</h1>
+      <h1 class="title">Daniel Bradley</h1>
+      <h3 class="title">Random Forest Machine Learning</h3>
     </div>
     <div class="container">
       <div class="row margin-top-50">
-        <div class="col-md-4">
+        <div class="col-lg-5">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Features</div>
+              <div class="panel-heading">Description</div>
               <div class="panel-body">
+                <p style="margin-left: 5px">I started with 1460 records comprising of 80 Features.  During the exploration process I discovered multiple categorical features with missing values.  These features with missing values were removed.  Next the features were greatly reduced by selecting only those with a correlation to Sale Price greater than 0.5.  </p>
+                
+                <p style="margin-left: 5px">The data was randomly divided into training and testing sets.  I then used Random Forest Regression with RandomizedSearchCV to find the best parameters for the model.
+                </p>
+                
+                <p style="margin-left: 5px">The training data has a score of 0.978 and the testing data had a score of 0.867 with a mean square error of 729555657.23!  
+                </p>
+                
+                <p style="margin-left: 5px">Following the RandomizedSearchCV the training data has a score of 0.917 and a testing score of 0.883 with a mean square error of 654125368.41!
+                </p>
+                <br>
+                <div class="row">
+                  <div  data-tooltip="This image shows the Feature importance calculated from the random forest regression.  The Overall Quality is shown to hold the heaviest weight with Sale Price.">
+                  <img " src="static/images/feature_importances.png" style="margin-left:25px">
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div  data-tooltip="This image shows the Random Forest model Test Value overlayed with the Predicted Value.">
+                  <img " src="static/images/rfpredictionCV.png" style="margin-left:25px">
+                </div>
+                  
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 
               </div>
             </div>
           </aside>
         </div>
-        <div class="col-md-8">
+        <div class="col-lg-7">
+            <div class="row">
+              <div  data-tooltip="These are the Features with correlation greater than 0.5 with the Sale Price.  Outliers were removed to improve the model.  Click the image to go to data in Tableau.">
             <div class='tableauPlaceholder' id='viz1595625322097' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15951854458460&#47;Corr0_5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Book1_15951854458460&#47;Corr0_5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bo&#47;Book1_15951854458460&#47;Corr0_5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1595625322097');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='2477px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          </div>
+          </div>
+          <br>
+          <div class="row">
+            <div  data-tooltip="This is a correlation map showing all the Features and their correlations with one another.  The Features were reduced from 80 to the 10 with a correlation greater than 0.5 with Sale Price.">
+            <img " src="static/images/corr_map.png">
+          </div>
+          </div>
         </div>
       </div>
     </div>

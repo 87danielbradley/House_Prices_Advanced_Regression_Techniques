@@ -63,8 +63,10 @@
         <div class="col-md-3">
           <aside class="filters">
             <div class="panel panel-default">
+              <div  data-tooltip="Fill in each Feature to Predict the Sale Price">
               <div class="panel-heading">Features</div>
               <div class="panel-body">
+                
                     <form action="{{ url_for('predict')}}"method="post">
                       <input type="text" name="OverallQual" placeholder="Overall Quality(1-10)" required="required" />
                       <input type="text" name="YearBuilt" placeholder="Year Built (1990)" required="required" />
@@ -79,8 +81,10 @@
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
+  
               </div>
             </div>
+          </div>
           </aside>
         </div>
         <div class="col-md-9">

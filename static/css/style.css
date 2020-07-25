@@ -12,7 +12,7 @@ body {
 
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .title {
-  color: white;
+  color: #000dfc;
   text-shadow: 2px 2px #404469;
 
 }
@@ -275,4 +275,28 @@ select {
 
 .dropdown-content {
   right: 0;
+}
+
+[data-tooltip]:before {
+    /* needed - do not touch */
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+    
+    /* customizable */
+    transition: all 0.15s ease;
+    padding: 10px;
+    color: #caedeb;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px silver;    
+}
+
+[data-tooltip]:hover:before {
+    /* needed - do not touch */
+    opacity: 1;
+    
+    /* customizable */
+    background: blue;
+    margin-top: -50px;
+    margin-left: 20px;    
 }
