@@ -61,7 +61,22 @@
         <div class="col-md-3">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Features Used-</div>
+              <div class="panel-heading">Description</div>
+              <div class="panel-body">
+                <p>We started with 1,460 records and 80 features. Before evaluating the correlation of each feature on the sale price, we cleaned ane prepared the data in various ways including:
+                  <ul class="list-group">
+                    <li class="list-group-item">replace null values with 0, median or mean</li>
+                    <li class="list-group-item">label hot encodiing</li>
+                    <li class="list-group-item">one label hot encodiing</li>
+                  </ul>
+
+                <p>We evaluated the training data and testing data and had a score of 91.3%. This an accurate model relative to our objective in the beginning, but I wanted to see if I reduce the number of features needed for an acccurate prediction </p>
+
+                <p>I performed a recursive feature elimination and got the number of features down to 13. However this decreased the accuracy of the model to 86%. Depending on what is more important to the user, either model could be used. </p>
+
+              </div>
+            
+              <div class="panel-heading">Features Used Before Recursive Feature Elimination-</div>
               <div class="panel-body">
                 <ul class="list-group">
                   <li class="list-group-item">Second Floor Square Feet</li>
@@ -101,13 +116,57 @@
             
               </div>
             </div>
+            <div></div>
           </aside>
         </div>
         <div style="padding-left: 10px" class="col-md-9">
+          <p>The predictive model used here was based off an ordinary least squares multiple regression</p>
           <p>Mean Square Error: .0944 </p>
-          <p>R^2: .9127 </p>
           <p>Training Model Score: 91.27 % </p>
           <img class="peter_ols" src="static/images/ols_regression.svg">
+          <div class="box">
+
+            <h5 class="title">Visualizations Dashboard</h5>
+  
+            <hr>
+  
+            <div class="container">
+  
+              <div class="row" style="padding-bottom: 30px;">
+  
+                <div class="col-md-4">
+  
+                    <img class="panel" src="static/images/peter_skewed_distribution.svg" alt="Peter_Original_Distro" width=380 height=253>
+  
+                </div>
+  
+                <div class="col-md-4">
+  
+                    <img class="panel" src="static/images/peter_normal_distribution.svg" alt="Normal_Distro" width=380 height=253>
+  
+                </div>
+  
+              </div>
+  
+              <div class="row" style="padding-bottom: 30px;">
+  
+                <div class="col-md-4">
+  
+                    <img src="static/images/high_feature_heatmap.svg" alt="Correlation_Chart" width=380 height=253>
+  
+                </div>
+  
+                <div class="col-md-4">
+  
+                    <img class="panel" src="static/images/ols_regression.svg" alt="Residual_Plot" width=380 height=253>
+  
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>  
           
 
         </div>
